@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-dark text-center d-flex align-items-center justify-content-center vh-100">
+    <div class="game-menu">
+        <div class="game-header mb-4">
+            <span class="xo-text">X</span>
+            <span class="o-text">O</span>
+        </div>
+        <div class="card bg-secondary p-4">
+            <h5 class="text-light">PICK PLAYER 1'S MARK</h5>
+            <div class="mark-select d-flex justify-content-center align-items-center my-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-dark text-light">X</button>
+                    <button type="button" class="btn btn-light">O</button>
+                </div>
+            </div>
+            <p class="text-muted">REMEMBER : X GOES FIRST</p>
+        </div>
+        <div class="mt-4">
+            <button class="btn btn-warning btn-lg mb-3 w-100" data-bs-toggle="modal" data-bs-target="#newGameModal">NEW
+                GAME (VS CPU)</button>
+            <button class="btn btn-info btn-lg w-100">NEW GAME (VS PLAYER)</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newGameModal" tabindex="-1" aria-labelledby="newGameModalLabel" aria-hidden="true">
+        <div class="modal-dialog" >
+            <div class="modal-content" style="background-color: #1a2b33;">
+                <div class="modal-body">
+                    <div class="game-container text-center">
+                        <div class="player-buttons">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="xo-container">
+                                    <span class="x-icon">X</span>
+                                    <span class="o-icon">O</span>
+                                </div>
+                                <button class="btn btn-primary player-btn">X turn</button>
+                                <div class="reload-button">
+                                    <i class="fas fa-redo"></i>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="game-board mt-3">
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                        </div>
+                
+                        <div class="button-container mt-4 d-flex justify-content-between">
+                            <button class="btn btn-info score-button x-button">X (YOU)<br>0</button>
+                            <button class="btn btn-warning score-button ties-button">TIES<br>0</button>
+                            <button class="btn btn-info score-button o-button">O (CPU)<br>0</button>
+                        </div>
+                    </div>
+                
+                    <div class="modal">
+                        <div class="modal-content">
+                            <h2>YOU WON!</h2>
+                            <p><span class="x-icon">X</span> TAKES THE ROUND</p>
+                            <div class="button-container mt-3">
+                                <button class="btn btn-danger quit">QUIT</button>
+                                <button class="btn btn-success next">NEXT ROUND</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenido del modal en blanco -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
